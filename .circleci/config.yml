@@ -10,10 +10,10 @@ jobs:
     steps:
       - checkout
       
-    #   - restore_cache:
-    #       keys:
-    #         - v1-dependencies--{{ checksum "requirements.txt" }}
-    #         - v1-dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies--{{ checksum "requirements.txt" }}
+            - v1-dependencies
             
     #   - run:
     #       name: install_dependencies
@@ -21,14 +21,14 @@ jobs:
     #         python3 -m venv docker_venv
     #         . docker_venv/bin/activate
     #         pip install -r requirements.txt
-            
-    #   - save_cache:
-    #       paths:
-    #         - docker_venv
-    #       key1: v1-dependencies--{{ checksum "requirements.txt" }}
-            
+       
       - python/install-packages:
           pkg-manager: pip
+            
+      - save_cache:
+          paths:
+            - docker_venv
+          key1: v1-dependencies--{{ checksum "requirements.txt" }}
           
       - run:
           name: Run lint
