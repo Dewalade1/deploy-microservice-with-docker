@@ -10,6 +10,7 @@ test:
 
 
 lint:
+	hadolint Dockerfile
 	pylint --disable=R,C hello.py
 
 all: install lint

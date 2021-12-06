@@ -7,4 +7,6 @@ def hello():
     name = request.args.get("name", "World")
     return f'Hello, {escape(name)}!'
     
-print("[*] App installed successfully but not running")
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080, debug=True)
