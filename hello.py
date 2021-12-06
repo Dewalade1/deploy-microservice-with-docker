@@ -7,4 +7,4 @@ def hello():
     name = request.args.get("name", "World")
     return f'Hello, {escape(name)}!'
     
-print("App installed successfully but not running")
+print("[*] App installed successfully but not running")
