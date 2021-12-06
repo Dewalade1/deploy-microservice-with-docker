@@ -28,7 +28,7 @@ jobs:
       - save_cache:
           paths:
             - docker_venv
-          key1: v1-dependencies--{{ checksum "requirements.txt" }}
+          key: v1-dependencies--{{ checksum "requirements.txt" }}
           
       - run:
           name: Run lint
