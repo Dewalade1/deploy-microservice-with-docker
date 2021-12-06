@@ -1,0 +1,4 @@
+pylint
+pandas
+scikit-learn
+keras
