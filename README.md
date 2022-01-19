@@ -1,9 +1,15 @@
-[![CircleCI](https://circleci.com/gh/Dewalade1/docker-with-cloud9/tree/main.svg?style=svg)](https://circleci.com/gh/Dewalade1/deploy-microservice-with-docker/tree/main)
+[![CircleCI](https://circleci.com/gh/Dewalade1/deploy-microservice-with-docker/tree/main.svg?style=svg)](https://circleci.com/gh/Dewalade1/deploy-microservice-with-docker/tree/main)
 
 # deploy-microservice-with-docker
 
 ## Overview
 This repo for contains steps to deploy and containerize apps on docker. This was done using AWS cloud9
+
+## Project Steps
+- Test the project code using linting in the makefile
+- Configure Kubernetes and create a Kubernetes cluster
+- Deploy a container using Kubernetes and make a prediction
+- Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
 ## Setup the Environment
 1. Download hadolint
